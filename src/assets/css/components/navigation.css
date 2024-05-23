@@ -1,0 +1,26 @@
+@layer components {
+  @media (max-width: 1280px) {
+    .navdiv {
+      z-index: 3;
+    }
+    .navigation {
+      display: none !important;
+      height: 0;
+      /* ensuring the default state is display:none */
+      z-index: 2;
+      animation: hait .3s ease;
+    }
+    .menu-active .navigation {
+      display: flex !important;
+      height: 100%;
+    }
+    @keyframes hait {
+      from {
+        transform: translateY(-300px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
+}
